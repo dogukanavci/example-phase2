@@ -1,13 +1,8 @@
 package com.dogukanavci.phase1.examplephase1.Specification;
 
-import com.dogukanavci.phase1.examplephase1.Model.Designation;
-import com.dogukanavci.phase1.examplephase1.Model.Employee;
+import com.dogukanavci.phase1.examplephase1.Entity.Designation;
+import com.dogukanavci.phase1.examplephase1.Entity.Employee;
 import org.springframework.data.jpa.domain.Specification;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 
 public class EmployeeSpecification {
     public static Specification<Employee> getEmployeesById(Long id){

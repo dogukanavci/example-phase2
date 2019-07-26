@@ -1,4 +1,4 @@
-package com.dogukanavci.phase1.examplephase1.Model;
+package com.dogukanavci.phase1.examplephase1.Entity;
 
 import javax.persistence.*;
 import java.io.Serializable;

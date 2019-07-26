@@ -1,6 +1,6 @@
 package com.dogukanavci.phase1.examplephase1.Repository;
 
-import com.dogukanavci.phase1.examplephase1.Model.Employee;
+import com.dogukanavci.phase1.examplephase1.Entity.Employee;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.CrudRepository;
 

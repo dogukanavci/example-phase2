@@ -1,7 +1,6 @@
 package com.dogukanavci.phase1.examplephase1.Repository;
 
-import com.dogukanavci.phase1.examplephase1.Model.Department;
-import com.dogukanavci.phase1.examplephase1.Model.Employee;
+import com.dogukanavci.phase1.examplephase1.Entity.Department;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

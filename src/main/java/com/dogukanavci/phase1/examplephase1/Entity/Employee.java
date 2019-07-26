@@ -1,4 +1,4 @@
-package com.dogukanavci.phase1.examplephase1.Model;
+package com.dogukanavci.phase1.examplephase1.Entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -23,16 +23,16 @@ public class Employee implements Serializable{
     private long salary;
     @Column(name = "department_id")
     private long departmentId;
-    @Column(name = "manager_id")
-    private long manager_id;
+    @Column(name = "managerId")
+    private long managerId;
     @Column(name = "designation")
     private Designation designation;
     protected Employee(){}
-    public Employee(String name, long salary,long department_id,long manager_id,Designation designation) {
+    public Employee(String name, long salary, long department_id, long managerId, Designation designation) {
         this.name = name;
         this.salary = salary;
         this.departmentId=department_id;
-        this.manager_id=manager_id;
+        this.managerId = managerId;
         this.designation=designation;
     }
 }

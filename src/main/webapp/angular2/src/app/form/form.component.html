@@ -1,0 +1,60 @@
+<div class="card my-5">
+  <div class="card-body">
+    <label>Create a new</label>
+    <div>
+      <label class="radio-inline"><input type="radio" name="optradio" checked (click)="this.creationId = 0">Employee</label>
+      <label class="radio-inline"><input type="radio" name="optradio" (click)="this.creationId = 1">Department</label>
+    </div>
+    <form *ngIf="this.creationId==0" (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="employee.name"
+               class="form-control" id="name" name="name" placeholder="Enter your name"
+               required #name="ngModel">
+        <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="text" [(ngModel)]="employee.salary"
+               class="form-control" id="salary" name="salary" placeholder="Enter salary"
+               required #salary="ngModel">
+        <div [hidden]="!salary.pristine" class="alert alert-danger">Salary is required</div>
+      </div>
+      <div class="form-group">
+        <label for="departmentId">Department #</label>
+        <input type="text" [(ngModel)]="employee.departmentId"
+               class="form-control" id="departmentId" name="departmentId" placeholder="Enter department Id"
+               required #departmentId="ngModel">
+        <div [hidden]="!departmentId.pristine" class="alert alert-danger">Department Id is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="managerId">Manager #</label>
+        <input type="text" [(ngModel)]="employee.managerId"
+               class="form-control" id="managerId" name="managerId" placeholder="Enter manager Id"
+               required #managerId="ngModel">
+        <div [hidden]="!managerId.pristine" class="alert alert-danger">Manager Id is required</div>
+      </div>
+      <div class="form-group">
+        <label for="managerId">Designation</label>
+        <input type="text" [(ngModel)]="employee.designation"
+               class="form-control" id="designation" name="designation" placeholder="Enter designation"
+               required #designation="ngModel">
+        <div [hidden]="!designation.pristine" class="alert alert-danger">Designation is required</div>
+      </div>
+      <button type="submit" [disabled]="!employeeForm.form.valid" class="btn btn-info">Submit</button>
+    </form>
+
+    <form *ngIf="this.creationId==1" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name1">Name</label>
+        <input type="text" [(ngModel)]="department.name"
+               class="form-control" id="name1" name="name1" placeholder="Enter department name"
+               required #name="ngModel">
+        <div [hidden]="!name1.pristine" class="alert alert-danger">Name is required</div>
+      </div>
+      <button type="submit" [disabled]="!employeeForm.form.valid" class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
